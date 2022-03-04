@@ -1,18 +1,9 @@
 fun main() {
-    val likes = 21
-    val strLikes = likes.toString()
-    val message = if (strLikes.endsWith('1') && !strLikes.endsWith("11")) "человеку" else "людям"
-    println("Понравилось $likes $message")
+    val likes = 1011
 
-    /**
-    1- человеку
-    11 - людям
-    21 - человеку
-    ...
-    101 - человеку
-    111 - ЛЮДЯМ
-    211 - ...
-    1011 - ...
-    -> исключить все что заканчивается на 1 , но не на 11
-     */
+    //val strLikes = likes.toString()
+    //val message = if (strLikes.endsWith('1') && !strLikes.endsWith("11")) "человеку" else "людям"
+
+    val message = if (likes % 10 == 1 && likes % 100 !== 11) "человеку" else "людям"
+    println("Понравилось $likes $message")
 }
